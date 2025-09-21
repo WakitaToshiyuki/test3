@@ -1,0 +1,58 @@
+.header{
+    width: 1512px;
+    height: 71px;
+    justify-content: space-between;
+    left: -0px;
+    border-bottom-width: 1px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-bottom: 1px solid #CDCDCD;
+}
+
+.header__logo{
+    width: 125px;
+    height: 51px;
+}
+
+.header__text{
+    font-family: Lora;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 40px;
+    color: #EC87EF;
+}
+
+.header__button{
+    width: 319px;
+    height: 44px;
+    gap: 20px;
+    right: 1000px;
+}
+
+.header__goal{
+    width: 158px;
+    height: 44px;
+    /* angle: 0 deg; */
+    /* opacity: 1; */
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 10px;
+    /* gap: 10px; */
+    background: #F7F7F7;
+    border: 1px solid #CDCDCD;
+}
+
+.header__logout{
+    width: 141px;
+    height: 44px;
+    /* angle: 0 deg; */
+    /* opacity: 1; */
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 10px;
+    /* gap: 10px; */
+    background: #F7F7F7;
+    border: 1px solid #CDCDCD;
+}
