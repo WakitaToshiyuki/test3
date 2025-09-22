@@ -17,18 +17,40 @@
             <h3>新規会員登録</h3>
             <p>STEP1 アカウント情報の登録</p>
             <form action="/register/step1" method="post">
+                @csrf
                 <table>
                     <tr>
                         <th>お名前</th>
-                        <td><input type="text" name="name"></td>
+                        <td>
+                            <input type="text" name="name">
+                            <div class="error">
+                                @error('name')
+                                {{$message}}
+                                @enderror
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <th>メールアドレス</th>
-                        <td><input type="text" name="email"></td>
+                        <td>
+                            <input type="text" name="email">
+                            <div class="error">
+                                @error('email')
+                                {{$message}}
+                                @enderror
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <th>パスワード</th>
-                        <td><input type="text" name="password"></td>
+                        <td>
+                            <input type="text" name="password">
+                            <div class="error">
+                                @error('password')
+                                {{$message}}
+                                @enderror
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>

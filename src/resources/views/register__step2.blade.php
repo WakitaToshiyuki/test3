@@ -21,11 +21,25 @@
                 <table>
                     <tr>
                         <th>現在の体重</th>
-                        <td><input type="text" name="weight"></td>
+                        <td>
+                            <input type="text" name="weight">
+                            <div class="error">
+                                @error('weight')
+                                {{$message}}
+                                @enderror
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <th>目標の体重</th>
-                        <td><input type="text" name="target_weight"></td>
+                        <td>
+                            <input type="text" name="target_weight">
+                            <div class="error">
+                                @error('target_weight')
+                                {{$message}}
+                                @enderror
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td>

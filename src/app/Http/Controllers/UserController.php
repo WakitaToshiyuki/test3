@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
 
 class UserController extends Controller
 {
@@ -14,7 +15,7 @@ class UserController extends Controller
         return view('register__step1');
     }
 
-    public function create1(Request $request){
+    public function create1(UserRequest $request){
         $user = $request -> only(['name','email','password']);
         User::create($user);
         return redirect('/register/step2');

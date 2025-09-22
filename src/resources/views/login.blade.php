@@ -16,14 +16,29 @@
       <h1>PiGLy</h1>
       <h3>ログイン</h3>
       <form action="/register/step1" method="post">
+        @csrf
         <table>
           <tr>
             <th>メールアドレス</th>
-            <td><input type="text" name="email"></td>
+            <td>
+              <input type="text" name="email">
+              <div class="error">
+                @error('email')
+                {{$message}}
+                @enderror
+              </div>
+            </td>
           </tr>
           <tr>
             <th>パスワード</th>
-            <td><input type="text" name="password"></td>
+            <td>
+              <input type="text" name="password">
+              <div class="error">
+                @error('password')
+                {{$message}}
+                @enderror
+              </div>
+            </td>
           </tr>
           <tr>
             <td>
