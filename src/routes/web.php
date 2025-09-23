@@ -14,7 +14,10 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/',[UserController::class,'index']);
+Route::middleware('auth')->group(function () {
+    Route::get('/weight_logs', [UserController::class, 'index']);
+});
+Route::get('/login',[UserController::class,'login'])->name('login');
 
 Route::get('/register/step1',[UserController::class,'step1']);
 Route::post('/register/step1',[UserController::class,'create1']);

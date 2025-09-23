@@ -22,7 +22,7 @@
                     <tr>
                         <th>お名前</th>
                         <td>
-                            <input type="text" name="name">
+                            <input type="text" name="name" value="{{ old('name') }}">
                             <div class="error">
                                 @error('name')
                                 {{$message}}
@@ -33,7 +33,7 @@
                     <tr>
                         <th>メールアドレス</th>
                         <td>
-                            <input type="text" name="email">
+                            <input type="text" name="email" value="{{ old('email') }}">
                             <div class="error">
                                 @error('email')
                                 {{$message}}

@@ -4,6 +4,6 @@
 @endsection 
 
 @section('content')
-
+<h1>よくやった！！！</h1>
 
 @endsection

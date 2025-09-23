@@ -15,13 +15,13 @@
     <div class="flame">
       <h1>PiGLy</h1>
       <h3>ログイン</h3>
-      <form action="/register/step1" method="post">
+      <form action="/login" method="post">
         @csrf
         <table>
           <tr>
             <th>メールアドレス</th>
             <td>
-              <input type="text" name="email">
+              <input type="text" name="email" value="{{ old('email') }}">
               <div class="error">
                 @error('email')
                 {{$message}}

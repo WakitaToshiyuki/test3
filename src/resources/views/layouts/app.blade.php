@@ -20,8 +20,13 @@
                 </h3>
             </div>
             <div class="header__button">
+                @if (Auth::check())
                 <button class="header__goal" action="/weight_logs/goal_setting">目標体重設定</button>
-                <button class="header__logout" action="/logout">ログアウト</button>
+                <form action="/logout" method="post">
+                @csrf
+                    <button class="header__logout">ログアウト</button>
+                </fotm>
+                @endif
             </div>
         </div>
     </header>
