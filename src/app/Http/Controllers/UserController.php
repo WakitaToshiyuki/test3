@@ -51,7 +51,8 @@ class UserController extends Controller
             // 'required','numeric','regex:/^\d{4}$/','regex:/^\d+(\.\d{1})?$/'
             'target_weight' => 'required|regex:/^\d{4}$/|regex:/^\d+(\.\d{1})?$/',
             // 'required','regex:/^\d{4}$/','regex:/^\d+(\.\d{1})?$/'
-        ],[
+        ],
+        [
             'weight.required'=>'体重を入力してください',
             'weight.numeric'=>'数字で入力してください',
             'weight.regex:/^\d{4}$/'=>'4桁までの数字で入力してください',
@@ -67,4 +68,8 @@ class UserController extends Controller
 
         return redirect('/weight_logs');
     }
+
+    public function demo(){
+        return view('index');
+    }    
 }
