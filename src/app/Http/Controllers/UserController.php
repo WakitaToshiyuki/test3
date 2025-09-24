@@ -13,7 +13,9 @@ use App\Models\Weight_target;
 class UserController extends Controller
 {
     public function index(){
-        return view('index');
+        $weight_targets=Weight_target::all();
+        $weight_logs=Weight_log::Paginate(8);
+        return view('index',['weight_targets'=>$weight_targets],['weight_logs'=>$weight_logs]);
     }
 
     public function login(){
@@ -62,14 +64,9 @@ class UserController extends Controller
             'target_weight.regex:/^\d+(\.\d{1})?$/'=>'小数点は1桁で入力してください',
         ]);
 
-        // モデルへの保存
         Weight_log::create(['weight' => $validated['weight']]);
         Weight_target::create(['target_weight' => $validated['target_weight']]);
 
         return redirect('/weight_logs');
     }
-
-    public function demo(){
-        return view('index');
-    }    
 }

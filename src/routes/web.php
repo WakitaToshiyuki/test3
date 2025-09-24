@@ -24,6 +24,3 @@ Route::post('/register/step1',[UserController::class,'create1']);
 
 Route::get('/register/step2',[UserController::class,'step2']);
 Route::post('/register/step2',[UserController::class,'create2']);
-
-
-Route::get('/',[UserController::class,'demo']);
